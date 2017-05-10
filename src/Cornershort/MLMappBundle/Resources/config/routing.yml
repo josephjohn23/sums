@@ -1,0 +1,71 @@
+# Security Routes
+fos_user_security_login:
+    path:  /login
+    defaults: { _controller: FOSUserBundle:Security:login }
+
+fos_user_security_check:
+    path:  /login_check
+    defaults: { _controller: FOSUserBundle:Security:check }
+
+fos_user_security_logout:
+    path:  /logout
+    defaults: { _controller: FOSUserBundle:Security:logout }
+
+fos_user_change_password:
+    resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
+    prefix: /profile
+
+fos_user_resetting:
+    resource: "@FOSUserBundle/Resources/config/routing/resetting.xml"
+    prefix: /resetting
+
+# Layout Routes
+cornershort_mlmapp_layout_sidebar_menu:
+    path:     /layout/sidebarMenu
+    defaults: { _controller: CornershortMLMappBundle:Default:sidebarMenu }
+
+cornershort_mlmapp_layout_page_header:
+    path:     /layout/pageHeader
+    defaults: { _controller: CornershortMLMappBundle:Default:pageHeader }
+
+# Menu Maintenance Pages
+cornershort_menu_list_children:
+    path:     /menu/children
+    defaults: { _controller: CornershortMLMappBundle:MenuWeb:listChildren }
+
+cornershort_menu_view_child:
+    path:     /menu/child/{id}
+    defaults: { _controller: CornershortMLMappBundle:MenuWeb:viewChild }
+
+cornershort_menu_list_parents:
+    path:     /menu/parents
+    defaults: { _controller: CornershortMLMappBundle:MenuWeb:listParents }
+
+cornershort_menu_view_parent:
+    path:     /menu/parent/{id}
+    defaults: { _controller: CornershortMLMappBundle:MenuWeb:viewParent }
+
+# Home Layout Control Pages
+cornershort_mlmapp_homepage:
+    path:     /
+    defaults: { _controller: CornershortMLMappBundle:HomeWeb:index }
+
+# Show New Members Layout Control Pages
+cornershort_mlmapp_register_member_page_show:
+    path:     /member/show-members
+    defaults: { _controller: CornershortMLMappBundle:RegisterMemberWeb:show }
+
+# Add New Member Layout Control Pages
+cornershort_mlmapp_register_member_page_add:
+    path:     /member/add
+    defaults: { _controller: CornershortMLMappBundle:RegisterMemberWeb:add }
+
+# Show User Account Layout Control Pages
+cornershort_mlmapp_user_account_page_show:
+    path:     /member/user-account/show
+    defaults: { _controller: CornershortMLMappBundle:UserAccountWeb:show }
+
+# Edit User Account Layout Control Pages
+cornershort_mlmapp_user_account_page_edit:
+    path:     /member/user-account/edit
+    defaults: { _controller: CornershortMLMappBundle:UserAccountWeb:edit }

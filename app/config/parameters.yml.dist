@@ -1,0 +1,38 @@
+# This file is a "template" of what your parameters.yml file should look like
+# Set parameters here that may be different on each deployment target of the app, e.g. development, staging, production.
+# http://symfony.com/doc/current/best_practices/configuration.html#infrastructure-related-configuration
+parameters:
+    database_host:     127.0.0.1
+    database_port:     ~
+    database_name:     symfony
+    database_user:     root
+    database_password: ~
+    # You should uncomment this if you want use pdo_sqlite
+    # database_path: "%kernel.root_dir%/data.db3"
+
+    mailer_transport:  smtp
+    mailer_host:       127.0.0.1
+    mailer_user:       ~
+    mailer_password:   ~
+    mailer_from:       no-reply@cornershort.com
+    mailer_from_name:  CornerShort Admin
+
+    # A secret key that's used to generate certain security-related tokens
+    secret:            ThisTokenIsNotSoSecretChangeIt
+
+    # Google Analytics Tracking #
+    ga_tracking:       GA-XXXX-XX
+
+    # Paypal Configuration
+    paypal_api_username: xxxxxx@xxx.xxx
+    paypal_api_password: ABC12345678910XYZ
+    paypal_api_signature: ABCDEFGHIJKLMNOPQRSTUVWXYZ.jLNfEMtg6Y76
+    paypal_api_debug: true
+
+    # Website Customization
+    portal_logo_url: bundles/cornershortmlmapp/images/john23f.png
+    portal_name:     User Management System
+    portal_css_sidemargin: 20px
+    portal_css_header_height: 60px
+    portal_css_header_bgcolor: #2f373e
+    portal_css_header_topmargin: 0px

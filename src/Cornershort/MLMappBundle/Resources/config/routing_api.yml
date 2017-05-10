@@ -1,0 +1,4 @@
+users:
+    resource:    "@CornershortMLMappBundle/Controller/REST/UserRESTController.php"
+    type:        rest
+    name_prefix: api_
